@@ -1,0 +1,17 @@
+<%- include("layout/header") %>
+    <main>
+        <form action="/register" method="post">
+            <input type="text" name="language" placeholder="language" required>
+            <button type="submit">Save</button>
+        </form>
+        <ul>
+            <% if(langNme.length > 0){ %>
+                <% for(var x = 0; x < langNme.length; x++){ %>
+                    <li><%= langNme[x] %></li>
+                <% } %>
+            <% }else{ %>
+                <p>Not found data</p>
+            <% } %>
+        </ul>
+    </main>
+<%- include("layout/footer") %>
